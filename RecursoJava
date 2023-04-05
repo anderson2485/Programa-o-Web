@@ -1,0 +1,11 @@
+ recurso de pacote ;
+
+importar  org . springframework . web . ligar . anotação . Mapeamento de Pedidos ;
+importar  org . springframework . web . ligar . anotação . RestController ;
+
+@ RestController
+@ RequestMapping ( value = "/users" )
+public  class  UserResource {
+    @ Autowired
+    private  UserRepository  userRepository ;
+}
