@@ -1,0 +1,30 @@
+pacote  com . exemplo . demonstração . serviços ;
+
+importar  org . springframework . estereótipo . Serviço ;
+
+@ Serviço
+public  class  UserService {
+    
+    @ Autowired
+    private  UserRepository  userRepository ;
+
+    public  User  createUser ( Usuário  usuário ) {
+        return  userRepository . salvar ( usuário );
+    }
+
+    public  List < Usuário > getAllUsers () {
+        return  userRepository . encontrarTodos ();
+    }
+
+    public  Opcional < Usuário > getUserById ( ID longo  ) {
+        return  userRepository . encontrarById ( id );
+    }
+
+    public  Usuário  atualizaçãoUsuário ( Usuário  usuário ) {
+        return  userRepository . salvar ( usuário );
+    }
+
+    public  void  deletarUsuário ( ID longo  ) {
+        userRepository . deleteById ( id );
+    }
+}
