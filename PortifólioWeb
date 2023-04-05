@@ -1,0 +1,13 @@
+pacote  com . exemplo . demonstração ;
+
+importar  org . springframework . bota . SpringApplication ;
+importar  org . springframework . bota . . _ Aplicação SpringBoot ;
+
+@ SpringBootApplication
+public  class  DemoApplication {
+
+	public  static  void  principal ( String [] args ) {
+		SpringApplication . executar ( DemoApplication . class , args );
+	}
+
+}
