@@ -1,0 +1,25 @@
+configuração do pacote ;
+
+ entidades de importação . usuário ;
+importar  org . springframework . feijão . fábrica . anotação . Autoligado ;
+importar  org . springframework . bota . CommandLineRunner ;
+importar  org . springframework . contexto . anotação . Feijão ;
+importar  org . springframework . contexto . anotação . Configuração ;
+ repositórios de importação . UserRepository ;
+
+@ Configuração
+public  class  TestConfig {
+    
+    @ Autowired
+    private  UserRepository  userRepository ;
+    
+    @ Feijão
+    public  CommandLineRunner  run () {
+        retornar  argumentos -> {
+
+            Usuário  user1 = new  User ( null , "Fulano" , "fulano@gmail.com" , "999999999" , "123456" );
+            Usuário  user2 = new  User ( null , "Ciclano" , "ciclano@gmail.com" , "888888888" , "abcdef" );
+            userRepository . saveAll ( Arrays . asList ( user1 , user2 ));
+        };
+    }
+}
