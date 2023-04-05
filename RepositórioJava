@@ -1,0 +1,9 @@
+ repositórios de pacotes ;
+
+ entidades de importação . usuário ;
+importar  org . springframework . dados . jpa . repositório . JpaRepository ;
+
+ interface  pública UserRepository  extends  JpaRepository < User , Long > {
+    Usuário  u1 = novo  usuário ( null , "Maria Brown" , "maria@gmail.com" , "988888888" , "123456" );
+Usuário  u2 = novo  usuário ( null , "Alex Green" , "alex@gmail.com" , "977777777" , "123456" );
+userRepository . saveAll ( Arrays . asList ( u1 , u2 ));
